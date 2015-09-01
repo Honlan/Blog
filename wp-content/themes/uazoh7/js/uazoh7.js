@@ -546,16 +546,16 @@
 	});
 })(jQuery);
 /* SIDEBAR FIXED BOX */
-// jQuery(window).on('load', function () {
-// 	var box = jQuery('#popular-post'),
-// 	offsetFIXED = box.offset();
-// 	var offsetfooter = jQuery('.uazoh7-footer');
-// 	offsetfooterFIXED = (offsetfooter.offset().top - 700);
-// 	jQuery(window).scroll(function () {
-// 		if(jQuery(window).scrollTop() > offsetFIXED.top && jQuery('#main').height() > jQuery('#side').height() && offsetfooterFIXED > jQuery(window).scrollTop()) {
-// 			box.addClass('fixed');
-// 		} else {
-// 			box.removeClass('fixed');
-// 		}
-// 	});
-// });
+jQuery(window).on('load', function () {
+	var box = jQuery('#popular-post'),
+	offsetFIXED = box.offset();
+	var offsetfooter = jQuery('.uazoh7-footer');
+	offsetfooterFIXED = (offsetfooter.offset().top - 700);
+	jQuery(window).scroll(function () {
+		if(jQuery(window).scrollTop() > offsetFIXED.top && jQuery('#main').height() > jQuery('#side').height() && offsetfooterFIXED > jQuery(window).scrollTop()) {
+			box.addClass('fixed');
+		} else {
+			box.removeClass('fixed');
+		}
+	});
+});
