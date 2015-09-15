@@ -5,6 +5,9 @@
 .uazoh7-post a {
 	color: #F99292;
 }
+.uazoh7-post header a {
+	color: #333;
+}
 </style>
 <!-- modify by Honlan -->
 
