@@ -1,5 +1,13 @@
 <?php get_header(); ?>
 
+<!-- modify by Honlan -->
+<style>
+.uazoh7-post a {
+	color: #F99292;
+}
+</style>
+<!-- modify by Honlan -->
+
 <script>
 	jQuery(document).ready(function(){
 		jQuery("#respond input").addClass("uazoh7-btn uazoh7-btn-small uazoh7-btn-secondary-border");
