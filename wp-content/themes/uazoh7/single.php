@@ -2,11 +2,14 @@
 
 <!-- modify by Honlan -->
 <style>
-.uazoh7-post a:link {
+.uazoh7-post a {
 	color: #F99292;
 }
-.uazoh7-post header a:link {
+.uazoh7-post header a {
 	color: #333;
+}
+.uazoh7-post a:hover {
+	color: #e14d43;
 }
 </style>
 <!-- modify by Honlan -->
