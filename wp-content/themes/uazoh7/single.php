@@ -2,10 +2,10 @@
 
 <!-- modify by Honlan -->
 <style>
-.uazoh7-post a {
+.uazoh7-post a:link {
 	color: #F99292;
 }
-.uazoh7-post header a {
+.uazoh7-post header a:link {
 	color: #333;
 }
 </style>
