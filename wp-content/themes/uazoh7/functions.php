@@ -353,4 +353,10 @@ function is___weixin(){
 	return false;
 }
 
+// 避免DDOS攻击
+add_filter( 'xmlrpc_methods', function( $methods ) {
+   unset( $methods['pingback.ping'] );
+   return $methods;
+});
+
 ?>
