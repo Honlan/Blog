@@ -365,16 +365,14 @@ function autoset_featured() {
     global $post;
     $already_has_thumb = has_post_thumbnail($post->ID);
     if (!$already_has_thumb)  {
-        $attached_image = get_children( "post_parent=$post->ID&post_type=attachment&post_mime_type=image&numberposts=1" );
-        if ($attached_image) {
-            foreach ($attached_image as $attachment_id => $attachment) {
-                set_post_thumbnail($post->ID, $attachment_id);
-                break;
-            }
-        }
-        else {
-        	set_post_thumbnail($post->ID, rand(632, 650));
-        }
+        // $attached_image = get_children( "post_parent=$post->ID&post_type=attachment&post_mime_type=image&numberposts=1" );
+        // if ($attached_image) {
+        //     foreach ($attached_image as $attachment_id => $attachment) {
+        //         set_post_thumbnail($post->ID, $attachment_id);
+        //         break;
+        //     }
+        // }
+        set_post_thumbnail($post->ID, rand(632, 650));
     }
 }
 // add_action('the_post', 'autoset_featured');
