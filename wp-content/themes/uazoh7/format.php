@@ -3,7 +3,9 @@
 <a href="<?php echo $image_url; ?>" class="colorbox img" title="<?php the_title(); ?>"><?php the_post_thumbnail(); ?></a>
 <?php }else { ?>
 <figure>
-<a href="<?php the_permalink(); ?>" class="colorbox" title="<?php the_title(); ?>"><?php echo get_the_post_thumbnail($post->ID,'uazoh-image-size-0'); ?></a>
+<!-- <a href="<?php the_permalink(); ?>" class="colorbox" title="<?php the_title(); ?>"> -->
+	<?php echo get_the_post_thumbnail($post->ID,'uazoh-image-size-0'); ?>
+<!-- </a> -->
 <figcaption><a href="<?php echo $image_url; ?>" title="<?php the_title(); ?>" class="colorbox"><i class="fa fa-plus"></i></a></figcaption>
 </figure>
 <?php }}  ?>
