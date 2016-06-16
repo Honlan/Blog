@@ -34,7 +34,7 @@ while ($query_posts->have_posts()) : $query_posts->the_post(); ?>
             <div class="uazoh7-widget uazoh7-tags-widget">
               <h3 style="font-size:20px;">文章 Tags</h3>
               <div class="uazoh7-widget-inner">
-                <?php wp_tag_cloud('smallest=5&largest=18&number=30&orderby=count'); ?><?php if(isset($smof_data['tags_more_enabled'])) {if($smof_data['tags_more_enabled'] != 0) { ?>
+                <?php wp_tag_cloud('smallest=5&largest=22&number=30&orderby=count'); ?><?php if(isset($smof_data['tags_more_enabled'])) {if($smof_data['tags_more_enabled'] != 0) { ?>
                 <p><a href="<?php echo $smof_data['tags_more_url']; ?>" class="uazoh7-btn uazoh7-btn-primary uazoh7-btn-small"><i class="fa fa-plus"></i> 更多Tags</a></p><?php }}?>
               </div>
             </div>
