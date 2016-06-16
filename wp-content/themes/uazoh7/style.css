@@ -42,9 +42,3 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><
 #main_nav li{list-style-type:none;padding:0 20px;}
 #main_nav li a{text-decoration:none;}
 ul.related_post li.zem_rp_related_post_load_more{display:none!important;}
-
-/* modified by Honlan */
-.uazoh7-home-slider {
-    display:none;
-}
-/* modified by Honlan */
