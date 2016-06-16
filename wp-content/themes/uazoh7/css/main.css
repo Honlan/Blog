@@ -589,4 +589,7 @@ a.tips:hover span {position:absolute; display:block; top:26px; left:0; width:280
 .uazoh7-home-slider {
     display:none;
 }
+.uazoh7-tags-widget a {
+	border-radius: 3px;
+}
 /* modified by Honlan */
