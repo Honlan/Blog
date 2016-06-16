@@ -1,8 +1,15 @@
+<!-- Modified by Honlan -->
+<style>
+article.post figure {
+	display: none;
+}
+</style>
+<!-- Modified by Honlan -->
+
 <section class="uazoh7-section">
 <div class="container">
 <div class="row">
-<?php     
-echo 1111;         
+<?php         
 if(isset($smof_data['blog_sidebar_pos'])) {
 if($smof_data['blog_sidebar_pos']=='0') {
 	echo '<div class="col-lg-12">';
