@@ -369,6 +369,7 @@ function autoset_featured() {
         if ($attached_image) {
             foreach ($attached_image as $attachment_id => $attachment) {
                 set_post_thumbnail($post->ID, $attachment_id);
+                break;
             }
         }
         else {
@@ -376,7 +377,7 @@ function autoset_featured() {
         }
     }
 }
-add_action('the_post', 'autoset_featured');
+// add_action('the_post', 'autoset_featured');
 add_action('save_post', 'autoset_featured');
 add_action('draft_to_publish', 'autoset_featured');
 add_action('new_to_publish', 'autoset_featured');
