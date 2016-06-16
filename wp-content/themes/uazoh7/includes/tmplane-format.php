@@ -3,6 +3,9 @@
 article.post figure {
 	display: none;
 }
+article.project figure figcaption {
+	display: none !important;
+}
 </style>
 <!-- Modified by Honlan -->
 
