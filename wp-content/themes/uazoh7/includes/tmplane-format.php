@@ -1,7 +1,8 @@
 <section class="uazoh7-section">
 <div class="container">
 <div class="row">
-<?php              
+<?php     
+echo 1111;         
 if(isset($smof_data['blog_sidebar_pos'])) {
 if($smof_data['blog_sidebar_pos']=='0') {
 	echo '<div class="col-lg-12">';
