@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('uazoh7-post'); ?>>
 <?php $thumb_id = get_post_thumbnail_id($post->ID);$image_url = wp_get_attachment_url($thumb_id);if ( has_post_thumbnail() ) { if(is_single()) {?>
-<a href="<?php echo $image_url; ?>" class="colorbox img" title="<?php the_title(); ?>"><?php the_post_thumbnail(); ?></a>
+<!-- <a href="<?php echo $image_url; ?>" class="colorbox img" title="<?php the_title(); ?>"><?php the_post_thumbnail(); ?></a> -->
 <?php }else { ?>
 <figure>
 <!-- <a href="<?php the_permalink(); ?>" class="colorbox" title="<?php the_title(); ?>"> -->
