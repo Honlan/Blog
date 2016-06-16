@@ -5,7 +5,7 @@
         <div class="row">
 		<div class="col-lg-2 col-md-2">
             <div class="uazoh7-widget uazoh7-links-widget">
-              <h3>links</h3>
+              <h3 style="font-size:20px;">Links</h3>
               <div class="uazoh7-widget-inner">
                 <?php wp_nav_menu( array('theme_location' => 'footer_menu','container'=> false,'menu_id' => 'footer_top_nav','menu_class' => 'mobile-menu','sort_column' => 'menu_order','fallback_cb' => ''));?>
               </div>
@@ -14,7 +14,7 @@
 
           <div class="col-lg-4 col-md-4">
             <div class="uazoh7-widget uazoh7-links-widget uazoh7-about-widget">
-              <h3>随机 <strong>文章</strong></h3>
+              <h3 style="font-size:20px;">随机 文章</h3>
               <div class="uazoh7-widget-inner">
    <ul>
 <?php
@@ -32,7 +32,7 @@ while ($query_posts->have_posts()) : $query_posts->the_post(); ?>
 
           <div class="col-lg-3 col-md-3">
             <div class="uazoh7-widget uazoh7-tags-widget">
-              <h3>文章 <strong>Tags</strong></h3>
+              <h3 style="font-size:20px;">文章 Tags</h3>
               <div class="uazoh7-widget-inner">
                 <?php wp_tag_cloud('smallest=13&largest=13&number=30&orderby=count'); ?><?php if(isset($smof_data['tags_more_enabled'])) {if($smof_data['tags_more_enabled'] != 0) { ?>
                 <p><a href="<?php echo $smof_data['tags_more_url']; ?>" class="uazoh7-btn uazoh7-btn-primary uazoh7-btn-small"><i class="fa fa-plus"></i> 更多Tags</a></p><?php }}?>
@@ -42,7 +42,7 @@ while ($query_posts->have_posts()) : $query_posts->the_post(); ?>
 
           <div class="col-lg-3 col-md-3">
             <div class="uazoh7-widget uazoh7-about-widget">
-              <h3>关注 | 联系</h3>
+              <h3 style="font-size:20px;">关注 联系</h3>
               <div class="uazoh7-widget-inner"><?php if(isset($smof_data['weixin_qrcode']['url']) && ($smof_data['weixin_qrcode']['url'] !='')) { ?>
                   <img src="<?php echo $smof_data['weixin_qrcode']['url']; ?>" alt="<?php bloginfo( 'name' ) ?> qr-code"><?php } else { ?>
 				  <img src="<?php echo get_template_directory_uri(); ?>/img/qr-code.png" alt="<?php bloginfo( 'name' ) ?> qr-code"><?php }?>
