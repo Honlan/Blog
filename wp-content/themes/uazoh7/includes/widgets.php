@@ -25,14 +25,23 @@ class honlan_homepage_posts extends WP_Widget {
 		echo $args['post_type'];
 		?>
 		<style>
+		.honlan-widget {
+			width: 1000px;
+			margin: 0 auto;
+			margin-bottom: 15px;
+		}
 		.honlan-widget .cell {
 			display: inline-block;
 			width: 220px;
 			height: 150px;
 			margin-left: 10px;
 			margin-right: 10px;
+			margin-bottom: 24px;
 			border-radius: 3px;
 			position: relative;
+		}
+		.honlan-widget .cell:hover {
+			box-shadow: 2px 2px 3px rgba(0,0,0,0.4);
 		}
 		.honlan-widget .cell div {
 			width: 220px;
@@ -49,6 +58,8 @@ class honlan_homepage_posts extends WP_Widget {
 			background-color: rgba(0,0,0,.5);
 			position: absolute;
 			bottom: 0;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
 		}
 		</style>
 		<div class="honlan-widget-<?php echo $instance['post_type']?> honlan-widget">
