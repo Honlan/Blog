@@ -3,7 +3,7 @@
 <footer class="uazoh7-footer">
       <div class="container">
         <div class="row">
-		<div class="col-lg-2 col-md-2">
+		<div class="col-lg-3 col-md-3">
             <div class="uazoh7-widget uazoh7-links-widget">
               <h3 style="font-size:20px;">Links</h3>
               <div class="uazoh7-widget-inner">
@@ -12,7 +12,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4">
+          <div class="col-lg-3 col-md-3">
             <div class="uazoh7-widget uazoh7-links-widget uazoh7-about-widget">
               <h3 style="font-size:20px;">随机 文章</h3>
               <div class="uazoh7-widget-inner">

@@ -6,7 +6,31 @@ register_widget('uazoh_Widget_Categories_List');
 register_widget('uazoh_Widget_Articles_Tabs_List');
 register_widget('uazoh_Widget_Homepage_post');
 register_widget('uazoh_Widget_Homepage_project');
+
+// Modified by Honlan
+// register_widget('honlan_homepage_posts');
+// Modified by Honlan
 }
+
+// Modified by Honlan
+class honlan_homepage_posts extends WP_Widget {  
+    public function __construct() {
+		$widget_ops = array( 'classname' => 'honlan_homepage_posts', 'description' => __( "根据条件筛选文章或项目" ) );
+		parent::__construct('honlan_homepage_posts','Honlan查询插件', $widget_ops);
+	}
+
+	public function widget( $args, $instance ) {
+		$query = new WP_Query( array ( 'orderby' => 'title', 'order' => 'DESC' ) );
+	}
+		
+	public function update( $new_instance, $old_instance ) {
+		return $new_instance;
+	}
+	public function form( $instance ) {
+		
+	}
+}  
+// Modified by Honlan
 
 add_action('admin_enqueue_scripts', 'uazoh_widget_admin_enqueue_scripts');
 
