@@ -20,20 +20,15 @@ class honlan_homepage_posts extends WP_Widget {
 	}
 
 	public function widget( $args, $instance ) {
-		$query = new WP_Query( array ( 'orderby' => 'ID', 'order' => 'DESC', 'post_type' => $args['post_type']) );
-		$number = 0; ?>
-		<div id="honlan-widget-<?php echo $args['post-type']?>">
-		<div class='row'>
-		<?php
+		$query = new WP_Query( array ( 'post_type' => $args['post_type'], 'orderby' => 'ID', 'order' => 'DESC') );
+		$number = 0;
+		echo '<div id="honlan-widget-post">';
+		echo '<div class="row">';
 		while ( $query->have_posts() ) {
 			$query->the_post();
-			echo '<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">'
-			
-			
-			echo '</div>';
 		}
-		echo '</div>';
-		echo '</div>';
+		echo "</div>";
+		echo "</div>";
 	}
 		
 	public function update( $new_instance, $old_instance ) {
