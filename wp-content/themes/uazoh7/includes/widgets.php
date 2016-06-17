@@ -25,12 +25,24 @@ class honlan_homepage_posts extends WP_Widget {
 		?>
 		<style>
 		.honlan-widget .cell {
+			display: inline-block;
 			width: 220px;
 			height: 150px;
 			margin-left: 10px;
 			margin-right: 10px;
-			background-size: cover;
 			border-radius: 3px;
+			position: relative;
+		}
+		.honlan-widget .cell>div {
+			width: 220px;
+			height: 150px;
+			background-size: cover;
+		}
+		.honlan-widget .cell>p {
+			color: white;
+			background-color: rgba(0,0,0,.5);
+			position: absolute;
+			bottom: 0;
 		}
 		</style>
 		<div class="honlan-widget-<?php echo $args['post_type']?> honlan-widget">
