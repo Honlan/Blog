@@ -91,7 +91,7 @@ class honlan_homepage_posts extends WP_Widget {
 			?>
 			<div class="cell">
 				<a href="<?php the_permalink();?>">
-					<div style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'small')[0];?>);">
+					<div style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'thumbnail')[0];?>);">
 					</div>
 					<p style="text-align:center;"><?php the_title();?></p>
 				</a>
