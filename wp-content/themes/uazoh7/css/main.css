@@ -586,6 +586,9 @@ a.tips:hover span {position:absolute; display:block; top:26px; left:0; width:280
 .dl-horizontal dd {margin-left: 90px;}
 
 /* modified by Honlan */
+body, html {
+	font-family: OpenSans-Light, PingFang SC, Hiragino Sans GB, Microsoft Yahei, Microsoft Jhenghei, sans-serif;
+}
 .uazoh7-home-slider {
     display:none;
 }

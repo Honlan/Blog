@@ -37,9 +37,14 @@ class honlan_homepage_posts extends WP_Widget {
 		.honlan-widget .cell div {
 			width: 220px;
 			height: 150px;
+			border-radius: 3px;
 			background-size: cover;
 		}
 		.honlan-widget .cell p {
+			width: 220px;
+			margin-bottom: 0;
+			line-height: 30px;
+			text-align: center;
 			color: white;
 			background-color: rgba(0,0,0,.5);
 			position: absolute;
