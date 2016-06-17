@@ -20,8 +20,9 @@ class honlan_homepage_posts extends WP_Widget {
 	}
 
 	public function widget( $args, $instance ) {
-		$query = new WP_Query( array ( 'post_type' => $args['post_type'], 'orderby' => 'ID', 'order' => 'DESC', 'posts_per_page' => 8) );
+		$query = new WP_Query( array ( 'post_type' => $instance['post_type'], 'orderby' => 'ID', 'order' => 'DESC', 'posts_per_page' => 8) );
 		$number = 0;
+		echo $args['post_type'];
 		?>
 		<style>
 		.honlan-widget .cell {
@@ -33,19 +34,19 @@ class honlan_homepage_posts extends WP_Widget {
 			border-radius: 3px;
 			position: relative;
 		}
-		.honlan-widget .cell>div {
+		.honlan-widget .cell div {
 			width: 220px;
 			height: 150px;
 			background-size: cover;
 		}
-		.honlan-widget .cell>p {
+		.honlan-widget .cell p {
 			color: white;
 			background-color: rgba(0,0,0,.5);
 			position: absolute;
 			bottom: 0;
 		}
 		</style>
-		<div class="honlan-widget-<?php echo $args['post_type']?> honlan-widget">
+		<div class="honlan-widget-<?php echo $instance['post_type']?> honlan-widget">
 		<?php
 		while ( $query->have_posts() ) {
 			$query->the_post();
