@@ -22,8 +22,10 @@ class honlan_homepage_posts extends WP_Widget {
 	public function widget( $args, $instance ) {
 		$query = new WP_Query( array ( 'post_type' => $args['post_type'], 'orderby' => 'ID', 'order' => 'DESC') );
 		$number = 0;
-		echo '<div id="honlan-widget-post">';
-		echo '<div class="row">';
+		?>
+		<div id="honlan-widget-<?php echo $args['post_type']?>">
+		<div class="row">
+		<?php
 		while ( $query->have_posts() ) {
 			$query->the_post();
 		}
