@@ -27,11 +27,12 @@ class honlan_homepage_posts extends WP_Widget {
 		<div class="row">
 		<?php
 		while ( $query->have_posts() ) {
-			// $query->the_post();
-			echo '<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">'
-			// echo $tmp;
-			// echo $query->post_title;
-			echo '</div>';
+			$query->the_post();
+			?>
+			<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+				<?php the_ID(); ?>
+			</div>
+			<?php
 		}
 		echo "</div>";
 		echo "</div>";
