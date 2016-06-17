@@ -20,7 +20,7 @@ class honlan_homepage_posts extends WP_Widget {
 	}
 
 	public function widget( $args, $instance ) {
-		$query = new WP_Query( array ( 'post_type' => $args['post_type'], 'orderby' => 'ID', 'order' => 'DESC') );
+		$query = new WP_Query( array ( 'post_type' => $args['post_type'], 'orderby' => 'ID', 'order' => 'DESC', 'posts_per_page' => 8) );
 		$number = 0;
 		?>
 		<div id="honlan-widget-<?php echo $args['post_type']?>">
@@ -30,7 +30,14 @@ class honlan_homepage_posts extends WP_Widget {
 			$query->the_post();
 			?>
 			<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-				<?php the_ID(); ?>
+				<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">'
+					<div class="cell">
+						<div style="width:80%;margin-left:10%;margin-right:10%;background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'thumbnail');?>);background-size:cover;">
+						</div>
+						<?php the_post_thumbnail()?>
+						<p style="text-align:center;"><?php the_title();?></p>
+					</div>
+				</div>
 			</div>
 			<?php
 		}
