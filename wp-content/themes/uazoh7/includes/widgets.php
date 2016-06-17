@@ -51,8 +51,11 @@ class honlan_homepage_posts extends WP_Widget {
 			-webkit-transition: box-shadow .4s;
 		}
 		.honlan-widget-project .cell {
-			width: 300px;
-			height: 210px;
+			width: 270px;
+			height: 180px;
+			margin-left: 20px;
+			margin-right: 20px;
+			margin-bottom: 34px;
 		}
 		.honlan-widget .cell:hover {
 			box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
@@ -64,8 +67,8 @@ class honlan_homepage_posts extends WP_Widget {
 			background-size: cover;
 		}
 		.honlan-widget-project .cell div {
-			width: 300px;
-			height: 210px;
+			width: 270px;
+			height: 180px;
 		}
 		.honlan-widget .cell p {
 			width: 220px;
@@ -81,7 +84,7 @@ class honlan_homepage_posts extends WP_Widget {
 			font-size: 13px;
 		}
 		.honlan-widget-project .cell p {
-			width: 300px;
+			width: 270px;
 		}
 		</style>
 		<div class="honlan-widget-<?php echo $instance['post_type']?> honlan-widget">
@@ -91,7 +94,7 @@ class honlan_homepage_posts extends WP_Widget {
 			?>
 			<div class="cell">
 				<a href="<?php the_permalink();?>">
-					<div style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'medium')[0];?>);">
+					<div style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'large')[0];?>);">
 					</div>
 					<p style="text-align:center;"><?php the_title();?></p>
 				</a>
