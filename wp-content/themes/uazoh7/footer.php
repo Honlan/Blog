@@ -20,7 +20,7 @@
 <?php
 global $post;
 $postid = $post->ID;
-$args = array( 'orderby' => 'rand', 'post__not_in' => array($post->ID), 'showposts' => 4);
+$args = array( 'orderby' => 'rand', 'post__not_in' => array($post->ID), 'showposts' => 5);
 $query_posts = new WP_Query();
 $query_posts->query($args);
 while ($query_posts->have_posts()) : $query_posts->the_post(); ?>
