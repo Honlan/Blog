@@ -30,7 +30,7 @@ class honlan_homepage_posts extends WP_Widget {
 			$query->the_post();
 			echo '<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">'
 			// echo $tmp;
-			echo $query->post_title;
+			// echo $query->post_title;
 			echo '</div>';
 		}
 		echo "</div>";
