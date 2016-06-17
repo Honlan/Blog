@@ -15,18 +15,32 @@ register_widget('honlan_homepage_posts');
 // Modified by Honlan
 class honlan_homepage_posts extends WP_Widget {  
     public function __construct() {
-		$widget_ops = array( 'classname' => 'honlan_homepage_posts', 'description' => __( "根据条件筛选文章或项目" ) );
+		$widget_ops = array( 'classname' => 'honlan_homepage_posts', 'description' => __( "根据条件筛选文章或项目" ), 'post_type' => 'post');
 		parent::__construct('honlan_homepage_posts','Honlan查询插件', $widget_ops);
 	}
 
 	public function widget( $args, $instance ) {
-		$query = new WP_Query( array ( 'orderby' => 'ID', 'order' => 'DESC' ) );
-		echo '<ul>';
+		$query = new WP_Query( array ( 'orderby' => 'ID', 'order' => 'DESC', 'post_type' => $args['post_type']) );
+		$number = 0; ?>
+		<div id="honlan-widget-<?php echo $args['post-type']?>">
+		<div class='row'>
+		<?php
 		while ( $query->have_posts() ) {
 			$query->the_post();
-			echo '<li>' . get_the_title() . '</li>';
+			echo '<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">'
+			$tmp = get_post(get_the_ID()); ?>
+
+			<div class="cell">
+				<div style="width:80%;margin-left:10%;margin-right:10%;background-image:url('<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($tmp->ID), 'thumbnail');?>');background-size:cover";>
+				</div>
+				<p style="text-align:center;"><?php $tmp->post_title;?></p>
+			</div>
+
+			<?php
+			echo '</div>';
 		}
-		echo '</ul>';
+		echo '</div>';
+		echo '</div>';
 	}
 		
 	public function update( $new_instance, $old_instance ) {
