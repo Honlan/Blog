@@ -15,13 +15,13 @@ register_widget('honlan_homepage_posts');
 // Modified by Honlan
 class honlan_homepage_posts extends WP_Widget {  
     public function __construct() {
-		$widget_ops = array( 'classname' => 'honlan_homepage_posts', 'description' => __( "根据条件筛选文章或项目" ), 'post_type' => 'post');
+		$widget_ops = array('classname' => 'honlan_homepage_posts', 'description' => __( "根据条件筛选文章或项目" ));
 		parent::__construct('honlan_homepage_posts','Honlan查询插件', $widget_ops);
 	}
 
 	public function widget( $args, $instance ) {
-		var_dump($args);
-		var_dump($instance);
+		print_r($args);
+		print_r($instance);
 		$query = new WP_Query( array ( 'post_type' => $instance['post_type'], 'orderby' => 'ID', 'order' => 'DESC', 'posts_per_page' => 8) );
 		$number = 0;
 		echo $args['post_type'];
@@ -91,7 +91,14 @@ class honlan_homepage_posts extends WP_Widget {
 		return $new_instance;
 	}
 	public function form( $instance ) {
+		$defaults = array('post_type' => 'post');
+		$instance = wp_parse_args((array)$instance, $defaults);
+		$post_type = $instance['post_type'];
+		?>
 		
+		<p><label for="<?php echo $this->get_field_id('post_type'); ?>">文章类别</label><select class="widefat" id="<?php echo $this->get_field_id('post_type'); ?>" name="<?php echo $this->get_field_name('post_type'); ?>" multiple="multiple" size="5" autocomplete="off"><option value="post">post</option><option value="project">project</option></select></p>
+
+		<?php
 	}
 }  
 // Modified by Honlan
