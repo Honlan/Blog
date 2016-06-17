@@ -8,7 +8,7 @@ register_widget('uazoh_Widget_Homepage_post');
 register_widget('uazoh_Widget_Homepage_project');
 
 // Modified by Honlan
-// register_widget('honlan_homepage_posts');
+register_widget('honlan_homepage_posts');
 // Modified by Honlan
 }
 
