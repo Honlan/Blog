@@ -20,8 +20,8 @@ class honlan_homepage_posts extends WP_Widget {
 	}
 
 	public function widget( $args, $instance ) {
-		print_r($args);
-		print_r($instance);
+		extract($args);
+		echo $instance['post_type'];
 		$query = new WP_Query( array ( 'post_type' => $instance['post_type'], 'orderby' => 'ID', 'order' => 'DESC', 'posts_per_page' => 8) );
 		$number = 0;
 		echo $args['post_type'];
@@ -88,7 +88,9 @@ class honlan_homepage_posts extends WP_Widget {
 	}
 		
 	public function update( $new_instance, $old_instance ) {
-		return $new_instance;
+		$instance = $old_instance;
+		$instance['post_type'] = $new_instance['post_type'];
+		return $instance;
 	}
 	public function form( $instance ) {
 		$defaults = array('post_type' => 'post');
