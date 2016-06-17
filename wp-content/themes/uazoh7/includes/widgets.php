@@ -20,7 +20,13 @@ class honlan_homepage_posts extends WP_Widget {
 	}
 
 	public function widget( $args, $instance ) {
-		$query = new WP_Query( array ( 'post_type' => $instance['post_type'], 'orderby' => 'ID', 'order' => 'DESC', 'posts_per_page' => 8) );
+		if ($instance['post_type'] == 'post') {
+			$number_of_article = 8;
+		}
+		else {
+			$number_of_article = 6;
+		}
+		$query = new WP_Query( array ( 'post_type' => $instance['post_type'], 'orderby' => 'ID', 'order' => 'DESC', 'posts_per_page' => $number_of_article) );
 		$number = 0;
 		?>
 		<style>
@@ -44,6 +50,10 @@ class honlan_homepage_posts extends WP_Widget {
 			-moz-transition: box-shadow .4s;
 			-webkit-transition: box-shadow .4s;
 		}
+		.honlan-widget-project .cell {
+			width: 330px;
+			height: 225px;
+		}
 		.honlan-widget .cell:hover {
 			box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
 		}
@@ -52,6 +62,10 @@ class honlan_homepage_posts extends WP_Widget {
 			height: 150px;
 			border-radius: 3px;
 			background-size: cover;
+		}
+		.honlan-widget-project .cell div {
+			width: 330px;
+			height: 225px;
 		}
 		.honlan-widget .cell p {
 			width: 220px;
@@ -64,6 +78,9 @@ class honlan_homepage_posts extends WP_Widget {
 			bottom: 0;
 			border-bottom-left-radius: 3px;
 			border-bottom-right-radius: 3px;
+		}
+		.honlan-widget .cell p {
+			width: 330px;
 		}
 		</style>
 		<div class="honlan-widget-<?php echo $instance['post_type']?> honlan-widget">
