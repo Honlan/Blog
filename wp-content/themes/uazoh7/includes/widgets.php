@@ -28,15 +28,8 @@ class honlan_homepage_posts extends WP_Widget {
 		while ( $query->have_posts() ) {
 			$query->the_post();
 			echo '<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">'
-			$tmp = get_post(get_the_ID()); ?>
-
-			<div class="cell">
-				<div style="width:80%;margin-left:10%;margin-right:10%;background-image:url('<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($tmp->ID), 'thumbnail');?>');background-size:cover";>
-				</div>
-				<p style="text-align:center;"><?php $tmp->post_title;?></p>
-			</div>
-
-			<?php
+			
+			
 			echo '</div>';
 		}
 		echo '</div>';
