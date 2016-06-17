@@ -30,13 +30,11 @@ class honlan_homepage_posts extends WP_Widget {
 			$query->the_post();
 			?>
 			<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-				<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">'
-					<div class="cell">
-						<div style="width:80%;margin-left:10%;margin-right:10%;background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'thumbnail');?>);background-size:cover;">
-						</div>
-						<?php the_post_thumbnail()?>
-						<p style="text-align:center;"><?php the_title();?></p>
+				<div class="cell">
+					<div style="width:80%;margin-left:10%;margin-right:10%;background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'thumbnail')[0];?>);background-size:cover;">
 					</div>
+					<?php the_post_thumbnail()?>
+					<p style="text-align:center;"><?php the_title();?></p>
 				</div>
 			</div>
 			<?php
