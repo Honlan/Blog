@@ -20,7 +20,13 @@ class honlan_homepage_posts extends WP_Widget {
 	}
 
 	public function widget( $args, $instance ) {
-		$query = new WP_Query( array ( 'orderby' => 'title', 'order' => 'DESC' ) );
+		$query = new WP_Query( array ( 'orderby' => 'ID', 'order' => 'DESC' ) );
+		echo '<ul>';
+		while ( $query->have_posts() ) {
+			$query->the_post();
+			echo '<li>' . get_the_title() . '</li>';
+		}
+		echo '</ul>';
 	}
 		
 	public function update( $new_instance, $old_instance ) {
