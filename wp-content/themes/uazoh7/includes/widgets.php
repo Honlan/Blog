@@ -23,19 +23,27 @@ class honlan_homepage_posts extends WP_Widget {
 		$query = new WP_Query( array ( 'post_type' => $args['post_type'], 'orderby' => 'ID', 'order' => 'DESC', 'posts_per_page' => 8) );
 		$number = 0;
 		?>
-		<div id="honlan-widget-<?php echo $args['post_type']?>">
-		<div class="row">
+		<style>
+		.honlan-widget .cell {
+			width: 220px;
+			height: 150px;
+			margin-left: 10px;
+			margin-right: 10px;
+			background-size: cover;
+			border-radius: 3px;
+		}
+		</style>
+		<div class="honlan-widget-<?php echo $args['post_type']?> honlan-widget">
 		<?php
 		while ( $query->have_posts() ) {
 			$query->the_post();
 			?>
-			<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-				<div class="cell">
-					<div style="width:80%;margin-left:10%;margin-right:10%;background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'thumbnail')[0];?>);background-size:cover;">
+			<div class="cell">
+				<a href="<?php the_permalink();?>">
+					<div style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'thumbnail')[0];?>);">
 					</div>
-					<?php the_post_thumbnail()?>
 					<p style="text-align:center;"><?php the_title();?></p>
-				</div>
+				</a>
 			</div>
 			<?php
 		}
