@@ -39,9 +39,14 @@ class honlan_homepage_posts extends WP_Widget {
 			margin-bottom: 24px;
 			border-radius: 3px;
 			position: relative;
+			transition: box-shadow .4s;
+			-o-transition: box-shadow .4s;
+			-ms-transition: box-shadow .4s;
+			-moz-transition: box-shadow .4s;
+			-webkit-transition: box-shadow .4s;
 		}
 		.honlan-widget .cell:hover {
-			box-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+			box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
 		}
 		.honlan-widget .cell div {
 			width: 220px;
