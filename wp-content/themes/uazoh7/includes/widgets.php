@@ -34,6 +34,7 @@ class honlan_homepage_posts extends WP_Widget {
 			width: 1000px;
 			margin: 0 auto;
 			margin-bottom: 15px;
+			text-align: center;
 		}
 		.honlan-widget .cell {
 			display: inline-block;
@@ -71,7 +72,8 @@ class honlan_homepage_posts extends WP_Widget {
 			height: 180px;
 		}
 		.honlan-widget .cell p {
-			width: 220px;
+			/*width: 220px;*/
+			width: 100%;
 			margin-bottom: 0;
 			line-height: 30px;
 			text-align: center;
@@ -83,8 +85,15 @@ class honlan_homepage_posts extends WP_Widget {
 			border-bottom-right-radius: 3px;
 			font-size: 13px;
 		}
-		.honlan-widget-project .cell p {
-			width: 270px;
+		@media screen and (max-width:768px) {
+			.honlan-widget {
+				width: 100%;
+			}
+			.honlan-widget .cell, .honlan-widget-project .cell {
+				width: 43%;
+				margin-left: 3%;
+				margin-right: 3%;
+			}
 		}
 		</style>
 		<div class="honlan-widget-<?php echo $instance['post_type']?> honlan-widget">
