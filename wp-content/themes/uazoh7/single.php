@@ -11,6 +11,14 @@
 .uazoh7-post a:hover {
 	color: #e14d43;
 }
+@media screen and (max-width:768px){
+	#main {
+		width: 100% !important;
+	}
+	#side {
+		display: none !important;
+	}
+}
 </style>
 <!-- modify by Honlan -->
 
