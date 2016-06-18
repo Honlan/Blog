@@ -80,7 +80,7 @@ class honlan_homepage_posts extends WP_Widget {
 			border-bottom-right-radius: 3px;
 			font-size: 13px;
 		}
-		@media screen and (max-width:768px) {
+		@media screen and (max-width:1000px) {
 			.honlan-widget {
 				width: 100%;
 			}
@@ -88,6 +88,16 @@ class honlan_homepage_posts extends WP_Widget {
 				width: 43%;
 				margin-left: 3%;
 				margin-right: 3%;
+			}
+		}
+		@media screen and (max-width:400px) {
+			.honlan-widget {
+				width: 100%;
+			}
+			.honlan-widget .cell, .honlan-widget-project .cell {
+				width: 70%;
+				margin-left: 14%;
+				margin-right: 14%;
 			}
 		}
 		</style>
