@@ -383,7 +383,7 @@ add_action('pending_to_publish', 'autoset_featured');
 add_action('future_to_publish', 'autoset_featured');
 
 // 统计访问次数
-function custom_the_views($post_id, $echo=true, $views=' views') {
+function custom_the_views($post_id, $echo=true, $views='阅读量') {
     $count_key = 'views';  
     $count = get_post_meta($post_id, $count_key, true);  
     if ($count == '') {  
