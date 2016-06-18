@@ -383,7 +383,7 @@ add_action('pending_to_publish', 'autoset_featured');
 add_action('future_to_publish', 'autoset_featured');
 
 // 统计访问次数
-function custom_the_views($post_id, $echo=true, $views='阅读量') {
+function custom_the_views($post_id, $echo=true, $views='&nbsp;&nbsp;阅读量 ') {
     $count_key = 'views';  
     $count = get_post_meta($post_id, $count_key, true);  
     if ($count == '') {  
@@ -392,9 +392,9 @@ function custom_the_views($post_id, $echo=true, $views='阅读量') {
         $count = '0';  
     }  
     if ($echo)  
-        echo number_format_i18n($count) . $views;  
+        echo $views . number_format_i18n($count);  
     else  
-        return number_format_i18n($count) . $views;  
+        return $views . number_format_i18n($count);  
 }  
 function set_post_views() {  
     global $post;  
