@@ -90,16 +90,6 @@ class honlan_homepage_posts extends WP_Widget {
 				margin-right: 3%;
 			}
 		}
-		@media screen and (max-width:400px) {
-			.honlan-widget {
-				width: 100%;
-			}
-			.honlan-widget .cell, .honlan-widget-project .cell {
-				width: 70%;
-				margin-left: 14%;
-				margin-right: 14%;
-			}
-		}
 		</style>
 		<div class="honlan-widget-<?php echo $instance['post_type']?> honlan-widget">
 		<?php
