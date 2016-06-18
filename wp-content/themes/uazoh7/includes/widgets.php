@@ -62,17 +62,12 @@ class honlan_homepage_posts extends WP_Widget {
 			box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
 		}
 		.honlan-widget .cell div {
-			width: 220px;
-			height: 150px;
+			width: 100%;
+			height: 100%;
 			border-radius: 3px;
 			background-size: cover;
 		}
-		.honlan-widget-project .cell div {
-			width: 270px;
-			height: 180px;
-		}
 		.honlan-widget .cell p {
-			/*width: 220px;*/
 			width: 100%;
 			margin-bottom: 0;
 			line-height: 30px;
