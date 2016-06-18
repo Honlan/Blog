@@ -85,7 +85,7 @@ class honlan_homepage_posts extends WP_Widget {
 				width: 100%;
 			}
 			.honlan-widget .cell, .honlan-widget-project .cell {
-				width: 43%;
+				width: 40%;
 				margin-left: 3%;
 				margin-right: 3%;
 			}
