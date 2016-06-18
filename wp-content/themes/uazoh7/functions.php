@@ -381,5 +381,35 @@ add_action('draft_to_publish', 'autoset_featured');
 add_action('new_to_publish', 'autoset_featured');
 add_action('pending_to_publish', 'autoset_featured');
 add_action('future_to_publish', 'autoset_featured');
+
+// 统计访问次数
+function custom_the_views($post_id, $echo=true, $views=' views') {
+    $count_key = 'views';  
+    $count = get_post_meta($post_id, $count_key, true);  
+    if ($count == '') {  
+        delete_post_meta($post_id, $count_key);  
+        add_post_meta($post_id, $count_key, '0');  
+        $count = '0';  
+    }  
+    if ($echo)  
+        echo number_format_i18n($count) . $views;  
+    else  
+        return number_format_i18n($count) . $views;  
+}  
+function set_post_views() {  
+    global $post;  
+    $post_id = $post->ID;  
+    $count_key = 'views';  
+    $count = get_post_meta($post_id, $count_key, true);  
+    if (is_single() || is_page()) {  
+        if ($count == '') {  
+            delete_post_meta($post_id, $count_key);  
+            add_post_meta($post_id, $count_key, '0');  
+        } else {  
+            update_post_meta($post_id, $count_key, $count + 1);  
+        }  
+    }  
+}  
+add_action('get_header', 'set_post_views'); 
 /* Modified by Honlan */
 ?>

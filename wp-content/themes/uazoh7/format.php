@@ -11,7 +11,7 @@
 <?php }}  ?>
 <header>
 <h3><i class="fa fa-pencil"></i><?php if(!is_single()) { ?> <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" target="_blank"> <?php $time=date("YmdHis"); if($post->post_title ==''){ echo $time.'[无标题]';}else{the_title();} ?></a><?php } else {  ?><span> <?php if($post->post_title ==''){ echo $time.'[无标题]';}else{the_title();} ?></span><?php } ?></h3>
-<p> <?php the_category(', '); ?> by <?php the_author_posts_link();?> <?php if(function_exists('the_views')){the_views();}?></p>
+<p> <?php the_category(', '); ?> by <?php the_author_posts_link(); ?> <?php if(function_exists('custom_the_views') ) custom_the_views($post->ID); ?></p>
 </header>
 
 <?php  if(is_single()) { the_content();wp_link_pages('before=<div class="page-links">Pages: &after=</div>');  }else{echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 300,…);?><p></p><p><a href="<?php the_permalink(); ?>" class="uazoh7-btn uazoh7-btn-small uazoh7-btn-secondary-border" target="_blank">阅读全文 <i class="fa fa-arrow-circle-right"></i></a></p>
