@@ -414,7 +414,7 @@ add_action('get_header', 'set_post_views');
 
 // gravatar
 function get_ssl_avatar($avatar) {
-    $avatar = preg_replace('/.*\/avatar\/(.*)\?s=([\d]+)&.*/','<img src="'.wp_get_attachment_image_src(rand(790, 799)).'" class="avatar" height="40" width="40">',$avatar);
+    $avatar = preg_replace('/.*\/avatar\/(.*)\?s=([\d]+)&.*/','<img src="'.wp_get_attachment_image_src(rand(790, 799))[0].'" class="avatar" height="40" width="40">',$avatar);
     return $avatar;
 }
 add_filter('get_avatar', 'get_ssl_avatar');
