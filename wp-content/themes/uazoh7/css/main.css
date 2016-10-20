@@ -86,7 +86,7 @@ input[type=submit],input[type=file],input[type=button],button[type=submit],butto
 .uazoh7-content-404-inner p.coming{font-size:450%;font-weight:bold;color:#fff;text-transform:uppercase;line-height:110%;margin:50px 0}
 .uazoh7-content-404-inner p.note{font-size:150%;color:#fff;line-height:150%}
 .uazoh7-content-404-inner p.note a{text-transform:capitalize;color:#fff}
-.uazoh7-page-title-1{width:100%;float:left;background-image:url(../img/slider-bg-dark.jpg);background-color:transparent!important;background-attachment:fixed;background-position:50% 0!important;background-repeat:repeat;position:relative;padding:60px 0}
+.uazoh7-page-title-1{width:100%;float:left;background-color:transparent!important;background-attachment:fixed;background-position:50% 0!important;background-repeat:repeat;position:relative;padding:60px 0}
 .uazoh7-page-title-1 h1{line-height:40px;font-size:360%;text-transform:capitalize;color:#fff;margin:0;padding:0;font-weight:lighter}
 .uazoh7-page-title-1 .search{width:100%;float:left;position:relative}
 .uazoh7-page-title-1 .search input[type=text]{width:100%;background-color:rgba(255,255,255,0.3);border:0;transition-style:linear;transition-duration:.2s;margin-top:3px}
@@ -600,5 +600,8 @@ body, html {
 }
 .uazoh7-mobile-breadscrubs {
 	padding: 10px 0;
+}
+.uazoh7-page-title-1 {
+	background-color: #111;
 }
 /* modified by Honlan */
